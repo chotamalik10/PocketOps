@@ -1,37 +1,58 @@
 # Roadmap
 
-This roadmap is directional. Items are not shipped until implemented, documented and tested.
+This roadmap distinguishes shipped behavior from planned work. An item moves to **Shipped** only after implementation, documentation and relevant tests are updated.
 
-## MVP — browser workspace
-- [x] Responsive dashboard
-- [x] Document and task records
-- [x] Local IndexedDB persistence
-- [x] Search, filters and task completion
-- [x] JSON backup and import
-- [x] PWA manifest and offline shell
-- [x] Community and security documentation
-- [x] Basic automated smoke tests
+## Shipped — browser MVP
 
-## Next — reliability
-- [ ] Browser end-to-end tests
-- [ ] Attachment-aware backup and restore
-- [ ] Schema versioning and safe data migrations
-- [ ] Accessibility audit and keyboard-only walkthrough
-- [ ] Better storage quota and backup guidance
+- [x] Responsive dashboard and workspace navigation
+- [x] Document records with create, edit, search, filter and delete workflows
+- [x] Task records with create, edit, completion, search, filter and delete workflows
+- [x] IndexedDB persistence for documents and tasks
+- [x] Attachment storage with safe-format previews and download fallback
+- [x] Upcoming and overdue task indicators
+- [x] Version 2 JSON backup with binary attachments
+- [x] Version 1 backup import compatibility
+- [x] Restore validation, 50 MB limit and transactional IndexedDB writes
+- [x] PWA manifest and offline app-shell caching
+- [x] MIT license, contribution guidance, code of conduct and security policy
+- [x] Node.js static smoke-test workflow
 
-## Later — intelligent capture
+## Next — product quality
+
+- [ ] Real-browser end-to-end tests for document, task and backup workflows
+- [ ] Keyboard-only and screen-reader accessibility review
+- [ ] Cross-browser verification (Chromium, Firefox and WebKit)
+- [ ] Storage quota handling and clearer low-storage recovery guidance
+- [ ] More complete empty, loading, error and confirmation states
+- [ ] Actual application screenshots and a maintained visual gallery
+- [ ] Refactor the single application script into maintainable modules
+
+## Next — language and usability
+
+- [ ] Localization architecture with translated interface strings
+- [ ] English, Urdu and Arabic interface translations
+- [ ] RTL layout verification for Urdu/Arabic
+- [ ] Locale-aware dates, number formatting and language persistence
+
+## Later — optional capabilities
+
+- [ ] Calendar-focused task planning
+- [ ] Tags, categories and advanced search
+- [ ] Optional reminders with explicit permission controls
+- [ ] Encrypted backup option and documented recovery flow
 - [ ] OCR with editable, user-confirmed extracted fields
 - [ ] Receipt and bill amount extraction
-- [ ] Warranty and deadline suggestions
-- [ ] Urdu, Arabic and English localization
 
 ## Cross-platform
-- [ ] Android packaging and device testing
-- [ ] Desktop packaging and release automation
-- [ ] Optional encrypted sync with clear threat model
 
-## Principles
-- Free core; no paid API required for essential features.
-- Local-first and privacy-respecting defaults.
-- No background upload of personal documents.
-- Destructive or externally visible actions require explicit user confirmation.
+- [ ] Android packaging and physical-device testing
+- [ ] Desktop packaging and release automation
+- [ ] Optional end-to-end encrypted sync with a reviewed threat model
+
+## Non-negotiable principles
+
+- The essential product remains free to use; no paid API is required for core workflows.
+- Personal records are not silently uploaded.
+- Optional network features require clear disclosure and explicit consent.
+- Destructive or externally visible actions require confirmation.
+- Documentation, screenshots and release notes must describe the actual shipped build, not planned features.
