@@ -81,3 +81,19 @@ test("overdue task summary and attachment preview controls are present", async (
 
 
 test("project changelog records current user-facing improvements", async () => { const log = await read("../CHANGELOG.md"); assert.match(log, /Unreleased/); assert.match(log, /overdue-task count/); });
+
+\ntest("English, Urdu and Arabic localization is loaded and supports RTL", async () => {
+  const html = await read("../index.html");
+  const app = await read("../app.js");
+  const locale = await read("../i18n.js");
+  const sw = await read("../sw.js");
+  assert.match(html, /id="languageSelect"/);
+  assert.match(html, /value="ur"/);
+  assert.match(html, /value="ar"/);
+  assert.match(app, /import "\.\/i18n\.js"/);
+  assert.match(locale, /translations\.ur/);
+  assert.match(locale, /translations\.ar/);
+  assert.match(locale, /documentElement\.dir/);
+  assert.match(locale, /pocketops-language/);
+  assert.match(sw, /\.\/i18n\.js/);
+});
