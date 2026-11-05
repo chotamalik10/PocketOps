@@ -113,8 +113,8 @@ test("localization never rewrites user-authored records and tolerates blocked st
   assert.match(locale, /parentElement\?\.closest\("\.user-content"\)/);
   assert.match(locale, /function savedLanguage\(\)[\s\S]*?catch\{return "en"\}/);
   assert.match(locale, /try\{localStorage\.setItem\("pocketops-language",current\)\}catch\{\}/);
-  assert.match(app, /<h3 class="user-content">\$\{esc\(d\.title\)\}<\/h3>/);
-  assert.match(app, /<strong class="user-content">\$\{esc\(t\.title\)\}<\/strong>/);
+  assert.match(app, /<h3 class="user-content"(?: dir="auto")?>\$\{esc\(d\.title\)\}<\/h3>/);
+  assert.match(app, /<strong class="user-content"(?: dir="auto")?>\$\{esc\(t\.title\)\}<\/strong>/);
 });
 
 
