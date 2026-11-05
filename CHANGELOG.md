@@ -18,6 +18,9 @@ This project is in early development. Versions before 1.0.0 may include breaking
 
 ### Improved
 - Date labels follow the selected interface locale.
+- User-authored document and task text is excluded from interface translation.
+- Mixed-language record text and entry fields use natural text-direction detection.
+- Accessible control labels and placeholders follow the selected language.
 - Responsive four-card dashboard statistics layout.
 - Architecture documentation now reflects attachment-aware v2 backups, v1 import compatibility and transactional restore behavior.
 - Roadmap now distinguishes shipped MVP capabilities from planned work.
