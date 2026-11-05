@@ -153,3 +153,11 @@ test("imported record IDs are escaped before entering HTML attributes", async ()
     assert.ok(app.includes(attribute + '="${esc('), "Missing escaped attribute interpolation for " + attribute);
   }
 });
+
+
+test("workspace navigation keeps its current-page state accessible", async () => {
+  const html = await read("../index.html");
+  const app = await read("../app.js");
+  assert.ok(html.includes('aria-current="page"'));
+  assert.ok(app.includes('aria-current'));
+});
