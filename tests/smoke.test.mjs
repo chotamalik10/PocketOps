@@ -105,3 +105,14 @@ test("localized select labels keep stable stored values", async () => {
     assert.ok(html.includes(`<option value="${value}">${value}</option>`), `Missing stable option value: ${value}`);
   }
 });
+
+
+test("localization never rewrites user-authored records and tolerates blocked storage", async () => {
+  const locale = await read("../i18n.js");
+  const app = await read("../app.js");
+  assert.match(locale, /parentElement\?\.closest\("\.user-content"\)/);
+  assert.match(locale, /function savedLanguage\(\)[\s\S]*?catch\{return "en"\}/);
+  assert.match(locale, /try\{localStorage\.setItem\("pocketops-language",current\)\}catch\{\}/);
+  assert.match(app, /<h3 class="user-content">\$\{esc\(d\.title\)\}<\/h3>/);
+  assert.match(app, /<strong class="user-content">\$\{esc\(t\.title\)\}<\/strong>/);
+});
