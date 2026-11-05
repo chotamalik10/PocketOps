@@ -29,10 +29,11 @@ This roadmap distinguishes shipped behavior from planned work. An item moves to 
 
 ## Next — language and usability
 
-- [ ] Localization architecture with translated interface strings
-- [ ] English, Urdu and Arabic interface translations
-- [ ] RTL layout verification for Urdu/Arabic
-- [ ] Locale-aware dates, number formatting and language persistence
+- [x] Initial localization architecture with English, Urdu and Arabic dictionaries
+- [x] Language selector and saved language preference
+- [x] RTL direction and layout rules for Urdu/Arabic
+- [x] Locale-aware date formatting
+- [ ] Full translation coverage review, native-speaker terminology review and RTL QA
 
 ## Later — optional capabilities
 
