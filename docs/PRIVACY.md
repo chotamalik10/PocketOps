@@ -8,7 +8,9 @@ PocketOps MVP is designed to keep personal records in the browser profile on the
 - The MVP does not require an account or remote database.
 - The MVP does not include analytics or advertising trackers.
 - JSON backups are generated in the browser and downloaded by the user.
-- File attachments are kept as local browser data; current JSON export excludes attachment bytes.
+- Version 2 JSON backups include attachment bytes as Base64 data so records can be moved between devices.
+- Version 1 backups remain importable for backward compatibility.
+- Restoring a backup is limited to 50 MB per selected backup file.
 
 ## Important limitations
 
