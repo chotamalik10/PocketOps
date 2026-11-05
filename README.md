@@ -9,12 +9,12 @@
 - Document records: title, type, important date, notes and optional local attachment
 - Tasks with due dates, priority and completion status
 - Search and filtering
-- JSON backup and import for records
+- Versioned JSON backup and restore, including binary attachments (v2 format; v1 import supported)
 - IndexedDB local persistence; no account, telemetry, paid API or remote database required
 - Installable PWA shell and offline app-shell caching
 
 ## Privacy and storage
-Records are stored in IndexedDB in the current browser profile on the current device. They do not sync between devices. Clearing browser site data may erase records. Export backups regularly. The current JSON export excludes binary attachments; download those separately before migrating.
+Records are stored in IndexedDB in the current browser profile on the current device. They do not sync between devices. Clearing browser site data may erase records. Export backups regularly. Version 2 backups include attachments; restoring a backup is limited to 50 MB. Backup files are not encrypted, so store them securely.
 
 Do not store passwords, payment-card details or highly sensitive identity information.
 
