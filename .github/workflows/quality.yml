@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
 jobs:
-  static-checks:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,11 +17,5 @@ jobs:
           node-version: 22
       - name: Check JavaScript syntax
         run: node --check app.js
-      - name: Validate required project files
-        run: |
-          test -s index.html
-          test -s styles.css
-          test -s app.js
-          test -s README.md
-          test -s LICENSE
-          test -s manifest.webmanifest
+      - name: Run smoke tests
+        run: npm test
