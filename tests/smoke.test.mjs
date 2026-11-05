@@ -127,3 +127,12 @@ test("user-authored content follows its own text direction in RTL locales", asyn
   assert.match(app, /class="user-content" dir="auto"/);
   assert.match(app, /<bdi class="user-content" dir="auto">/);
 });
+
+
+test("localization updates accessible labels and placeholders", async () => {
+  const locale = await read("../i18n.js");
+  assert.match(locale, /function translateAttributes\(root=document\.body\)/);
+  assert.match(locale, /aria-label/);
+  assert.match(locale, /Complete task/);
+  assert.match(locale, /translateAttributes\(node\)/);
+});
