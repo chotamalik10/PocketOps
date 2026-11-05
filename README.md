@@ -30,10 +30,10 @@ PocketOps brings everyday personal administration into one simple workspace.
 | Backup | Versioned JSON export/import, including binary attachments in v2 backups |
 | Offline | Installable PWA shell with service-worker caching |
 
-## Screens and experience
+## Experience
 
 - Responsive layout for desktop and mobile browsers.
-- Local-first storage using IndexedDB.
+- Local-first persistence using IndexedDB.
 - Keyboard-visible focus states and reduced-motion support.
 - No external font downloads, analytics, tracking pixels or paid API dependency.
 
@@ -46,8 +46,6 @@ PocketOps brings everyday personal administration into one simple workspace.
 - Node.js 20+ to run the repository test suite.
 
 ### Run locally
-
-Clone the repository and start a local server:
 
 ```bash
 git clone https://github.com/chotamalik10/PocketOps.git
@@ -92,15 +90,22 @@ See [Privacy notes](docs/PRIVACY.md) and [Architecture](docs/ARCHITECTURE.md).
 
 ## Roadmap
 
-- [ ] Browser end-to-end tests and accessibility audit
-- [ ] Calendar-focused task planning
-- [ ] Tags, categories and advanced search
+### Product quality
+- [ ] Browser end-to-end tests and accessibility review
+- [ ] Cross-browser verification and storage-quota handling
+- [ ] Real app screenshots and visual gallery
+- [ ] Modular application architecture
+
+### Language support
+- [ ] English, Urdu and Arabic interface localization
+- [ ] Right-to-left layout and locale-aware formatting
+
+### Future capabilities
+- [ ] Calendar planning, tags and advanced search
 - [ ] Optional reminders with explicit permission controls
-- [ ] Encrypted, attachment-aware backups
-- [ ] Urdu, Arabic and English localization
-- [ ] Native Android and desktop packaging
-- [ ] Optional end-to-end encrypted sync
+- [ ] Encrypted backups and optional end-to-end encrypted sync
 - [ ] OCR with user-confirmed extraction
+- [ ] Native Android and desktop packaging
 
 Roadmap items are plans, not promises or current features.
 
