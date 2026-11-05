@@ -75,3 +75,6 @@ test("documents and tasks expose edit workflows and preserve existing records", 
   assert.match(js, /old\?\.fileBlob/);
   assert.match(js, /done:old\?\.done\|\|false/);
 });
+
+
+test("overdue task summary and attachment preview controls are present", async () => { const js=await read("../app.js"); const html=await read("../index.html"); assert.match(js,/todayKey/); assert.match(js,/overdue-label/); assert.match(html,/statOverdue/); assert.match(js,/data-preview/); assert.match(js,/noopener,noreferrer/); });
