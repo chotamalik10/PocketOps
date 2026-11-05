@@ -64,3 +64,14 @@ test("branded illustration is referenced and cached for offline use", async () =
   assert.match(illustration, /<svg/);
   assert.doesNotMatch(css, /@import\s+url\(['"]https?:/);
 });
+
+
+test("documents and tasks expose edit workflows and preserve existing records", async () => {
+  const js = await read("../app.js");
+  assert.match(js, /function modal\(kind,record=null\)/);
+  assert.match(js, /data-edit-doc/);
+  assert.match(js, /data-edit-task/);
+  assert.match(js, /updatedAt:new Date\(\)\.toISOString\(\)/);
+  assert.match(js, /old\?\.fileBlob/);
+  assert.match(js, /done:old\?\.done\|\|false/);
+});
