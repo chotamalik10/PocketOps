@@ -14,7 +14,8 @@
 | --- | --- |
 | `index.html` | Semantic application shell, navigation, views and entry forms |
 | `styles.css` | Design tokens, responsive layout, component styling, focus and reduced-motion behavior |
-| `app.js` | View state, validation, rendering, IndexedDB access, attachments and backup workflows |\n| `i18n.js` | English, Urdu and Arabic interface translations, language preference and RTL direction |
+| `app.js` | View state, validation, rendering, IndexedDB access, attachments and backup workflows |
+| `i18n.js` | English, Urdu and Arabic interface translations, language preference and RTL direction |
 | IndexedDB | Persistent `documents` and `tasks` object stores |
 | `manifest.webmanifest` | PWA name, icons, display mode and launch metadata |
 | `sw.js` | App-shell caching for repeat/offline launches |
