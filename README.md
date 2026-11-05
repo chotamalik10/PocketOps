@@ -104,6 +104,10 @@ See [Privacy notes](docs/PRIVACY.md) and [Architecture](docs/ARCHITECTURE.md).
 
 Roadmap items are plans, not promises or current features.
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for user-facing project updates.
+
 ## Contributing
 
 Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md), follow the [Code of Conduct](CODE_OF_CONDUCT.md), and review the issue templates before opening a pull request.
