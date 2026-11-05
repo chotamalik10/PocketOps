@@ -33,6 +33,9 @@ This roadmap distinguishes shipped behavior from planned work. An item moves to 
 - [x] Language selector and saved language preference
 - [x] RTL direction and layout rules for Urdu/Arabic
 - [x] Locale-aware date formatting
+- [x] Keep user-authored records unchanged when switching interface languages
+- [x] Natural text direction for mixed-language content and form fields
+- [x] Localized accessible labels and placeholders
 - [ ] Full translation coverage review, native-speaker terminology review and RTL QA
 
 ## Later — optional capabilities
