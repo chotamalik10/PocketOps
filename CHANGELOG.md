@@ -7,6 +7,8 @@ This project is in early development. Versions before 1.0.0 may include breaking
 ## Unreleased
 
 ### Added
+- English, Urdu and Arabic language selector with saved preference.
+- Initial right-to-left layout support for Urdu and Arabic.
 - Document and task editing while preserving creation timestamps.
 - Attachment opening for PDF, PNG, JPEG, GIF, WebP and plain-text files.
 - Download fallback for attachment formats that are not previewed.
@@ -15,6 +17,7 @@ This project is in early development. Versions before 1.0.0 may include breaking
 - A redesigned vector workspace illustration for the dashboard.
 
 ### Improved
+- Date labels follow the selected interface locale.
 - Responsive four-card dashboard statistics layout.
 - Architecture documentation now reflects attachment-aware v2 backups, v1 import compatibility and transactional restore behavior.
 - Roadmap now distinguishes shipped MVP capabilities from planned work.
