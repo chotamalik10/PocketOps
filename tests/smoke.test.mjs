@@ -136,3 +136,20 @@ test("localization updates accessible labels and placeholders", async () => {
   assert.match(locale, /Complete task/);
   assert.match(locale, /translateAttributes\(node\)/);
 });
+
+
+test("dashboard statistics use a responsive four-card grid", async () => {
+  const css = await read("../styles.css");
+  const html = await read("../index.html");
+  assert.match(css, /\.stats\{grid-template-columns:repeat\(4,minmax\(0,1fr\)\)\}/);
+  assert.match(css, /@media\(max-width:1050px\)\{\.stats\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)\}\}/);
+  assert.match(css, /@media\(max-width:720px\)\{\.stats\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)\}\}/);
+  for (const id of ["statDocs", "statTasks", "statDue", "statOverdue"]) assert.ok(html.includes(`id="${id}"`));
+});
+
+test("imported record IDs are escaped before entering HTML attributes", async () => {
+  const app = await read("../app.js");
+  for (const attribute of ["data-preview", "data-file", "data-edit-doc", "data-delete-doc", "data-toggle", "data-edit-task", "data-delete-task"]) {
+    assert.ok(app.includes(`${attribute}="${esc`), `Missing escaped attribute interpolation for ${attribute}`);
+  }
+});
