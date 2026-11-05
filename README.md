@@ -7,7 +7,9 @@
 ## MVP features
 - Responsive web dashboard for desktop and mobile browsers
 - Document records: title, type, important date, notes and optional local attachment
-- Tasks with due dates, priority and completion status
+- Edit existing documents and tasks
+- Open supported PDF, image and plain-text attachments in a separate tab
+- Tasks with due dates, priority, completion status and overdue indicators
 - Search and filtering
 - Versioned JSON backup and restore, including binary attachments (v2 format; v1 import supported)
 - IndexedDB local persistence; no account, telemetry, paid API or remote database required
