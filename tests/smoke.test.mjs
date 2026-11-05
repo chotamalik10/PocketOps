@@ -92,8 +92,8 @@ test("English, Urdu and Arabic localization is loaded and supports RTL", async (
   assert.match(html, /value="ur"/);
   assert.match(html, /value="ar"/);
   assert.match(app, /import "\.\/i18n\.js"/);
-  assert.match(locale, /translations\.ur/);
-  assert.match(locale, /translations\.ar/);
+  assert.match(locale, /ur:\{/);
+  assert.match(locale, /ar:\{/);
   assert.match(locale, /documentElement\.dir/);
   assert.match(locale, /pocketops-language/);
   assert.match(sw, /\.\/i18n\.js/);
