@@ -116,3 +116,14 @@ test("localization never rewrites user-authored records and tolerates blocked st
   assert.match(app, /<h3 class="user-content">\$\{esc\(d\.title\)\}<\/h3>/);
   assert.match(app, /<strong class="user-content">\$\{esc\(t\.title\)\}<\/strong>/);
 });
+
+
+test("user-authored content follows its own text direction in RTL locales", async () => {
+  const html = await read("../index.html");
+  const app = await read("../app.js");
+  assert.match(html, /name="title" dir="auto"/);
+  assert.match(html, /name="taskTitle" dir="auto"/);
+  assert.match(html, /id="docSearch" dir="auto"/);
+  assert.match(app, /class="user-content" dir="auto"/);
+  assert.match(app, /<bdi class="user-content" dir="auto">/);
+});
