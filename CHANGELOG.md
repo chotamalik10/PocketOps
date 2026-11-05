@@ -12,10 +12,13 @@ This project is in early development. Versions before 1.0.0 may include breaking
 - Download fallback for attachment formats that are not previewed.
 - Dashboard overdue-task count and overdue labels in task lists.
 - Expanded project documentation and workflow smoke checks.
+- A redesigned vector workspace illustration for the dashboard.
 
 ### Improved
 - Responsive four-card dashboard statistics layout.
-- Clearer README coverage of shipped features, privacy boundaries and platform support.
+- Architecture documentation now reflects attachment-aware v2 backups, v1 import compatibility and transactional restore behavior.
+- Roadmap now distinguishes shipped MVP capabilities from planned work.
+- README coverage of shipped features, privacy boundaries, platform support and quality gaps.
 
 ### Security
 - Attachment previews are restricted to a small allowlist of common, non-SVG formats.
