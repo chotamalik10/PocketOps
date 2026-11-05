@@ -78,3 +78,6 @@ test("documents and tasks expose edit workflows and preserve existing records", 
 
 
 test("overdue task summary and attachment preview controls are present", async () => { const js=await read("../app.js"); const html=await read("../index.html"); assert.match(js,/todayKey/); assert.match(js,/overdue-label/); assert.match(html,/statOverdue/); assert.match(js,/data-preview/); assert.match(js,/noopener noreferrer/); });
+
+
+test("project changelog records current user-facing improvements", async () => { const log = await read("../CHANGELOG.md"); assert.match(log, /Unreleased/); assert.match(log, /overdue-task count/); });
