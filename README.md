@@ -45,7 +45,7 @@ PocketOps brings everyday personal administration into one simple workspace.
 - Responsive layout for desktop and mobile browsers.
 - Local-first persistence using IndexedDB.
 - Keyboard-visible focus states and reduced-motion support.
-- No external font downloads, analytics, tracking pixels or paid API dependency.
+- English, Urdu and Arabic interface options, including right-to-left layout for Urdu and Arabic.\n- No external font downloads, analytics, tracking pixels or paid API dependency.
 
 ## Get started
 
