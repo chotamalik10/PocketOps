@@ -22,8 +22,7 @@ test("core workspace views and accessible status region exist", async () => {
 test("application implements local persistence and backup flows", async () => {
   const js = await read("../app.js");
   assert.match(js, /indexedDB\.open/);
-  assert.match(js, /createObjectStore\("documents"/);
-  assert.match(js, /createObjectStore\("tasks"/);
+  assert.match(js, /\["documents","tasks"\]/);
   assert.match(js, /exportBtn/);
   assert.match(js, /importInput/);
 });
@@ -40,4 +39,14 @@ test("offline worker precaches the application shell", async () => {
   for (const asset of ["./index.html", "./styles.css", "./app.js", "./manifest.webmanifest"]) {
     assert.ok(sw.includes(asset), `Service worker does not precache ${asset}`);
   }
+});
+
+test("backup format preserves attachments and validates imported records", async () => {
+  const js = await read("../app.js");
+  assert.match(js, /version:2/);
+  assert.match(js, /blobToDataURL/);
+  assert.match(js, /dataURLToBlob/);
+  assert.match(js, /50\*1024\*1024/);
+  assert.match(js, /Invalid document record/);
+  assert.match(js, /Invalid task record/);
 });
