@@ -30,6 +30,16 @@ PocketOps brings everyday personal administration into one simple workspace.
 | Backup | Versioned JSON export/import, including binary attachments in v2 backups |
 | Offline | Installable PWA shell with service-worker caching |
 
+## Visual preview
+
+<div align="center">
+
+<img src="assets/workspace-illustration.svg" alt="PocketOps workspace illustration" width="620" />
+
+<sub>Product illustration for the current browser MVP — not a live application screenshot.</sub>
+
+</div>
+
 ## Experience
 
 - Responsive layout for desktop and mobile browsers.
