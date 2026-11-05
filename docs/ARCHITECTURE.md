@@ -14,13 +14,13 @@
 | --- | --- |
 | `index.html` | Semantic application shell, navigation, views and entry forms |
 | `styles.css` | Design tokens, responsive layout, component styling, focus and reduced-motion behavior |
-| `app.js` | View state, validation, rendering, IndexedDB access, attachments and backup workflows |
+| `app.js` | View state, validation, rendering, IndexedDB access, attachments and backup workflows |\n| `i18n.js` | English, Urdu and Arabic interface translations, language preference and RTL direction |
 | IndexedDB | Persistent `documents` and `tasks` object stores |
 | `manifest.webmanifest` | PWA name, icons, display mode and launch metadata |
 | `sw.js` | App-shell caching for repeat/offline launches |
 | `tests/smoke.test.mjs` | Node-based static smoke checks for key wiring and safeguards |
 
-The application has no server-side component. The service worker caches the application shell; it is not a cloud-sync mechanism.
+The application has no server-side component. The interface currently offers English, Urdu and Arabic selection. Urdu and Arabic use right-to-left document direction; date formatting follows the selected document language. Translation coverage is an initial interface pass and still needs human review for terminology and edge cases. The service worker caches the application shell; it is not a cloud-sync mechanism.
 
 ## Persistence model
 
