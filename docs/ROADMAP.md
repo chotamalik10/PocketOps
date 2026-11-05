@@ -10,6 +10,9 @@ This roadmap distinguishes shipped behavior from planned work. An item moves to 
 - [x] IndexedDB persistence for documents and tasks
 - [x] Attachment storage with safe-format previews and download fallback
 - [x] Upcoming and overdue task indicators
+- [x] Responsive four-card dashboard statistics grid
+- [x] Escape imported record identifiers before rendering HTML attributes
+- [x] Accessible active-page state in workspace navigation
 - [x] Version 2 JSON backup with binary attachments
 - [x] Version 1 backup import compatibility
 - [x] Restore validation, 50 MB limit and transactional IndexedDB writes
