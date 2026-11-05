@@ -98,3 +98,10 @@ test("English, Urdu and Arabic localization is loaded and supports RTL", async (
   assert.match(locale, /pocketops-language/);
   assert.match(sw, /\.\/i18n\.js/);
 });
+
+test("localized select labels keep stable stored values", async () => {
+  const html = await read("../index.html");
+  for (const value of ["Receipt", "Bill", "Warranty", "Personal", "Study", "Other", "Normal", "High", "Low"]) {
+    assert.ok(html.includes(`<option value="${value}">${value}</option>`), `Missing stable option value: ${value}`);
+  }
+});
