@@ -49,4 +49,6 @@ test("backup format preserves attachments and validates imported records", async
   assert.match(js, /50\*1024\*1024/);
   assert.match(js, /Invalid document record/);
   assert.match(js, /Invalid task record/);
+  assert.match(js, /restoreRecords/);
+  assert.match(js, /tx\.onabort/);
 });
