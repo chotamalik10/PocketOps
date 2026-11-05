@@ -52,3 +52,15 @@ test("backup format preserves attachments and validates imported records", async
   assert.match(js, /restoreRecords/);
   assert.match(js, /tx\.onabort/);
 });
+
+
+test("branded illustration is referenced and cached for offline use", async () => {
+  const html = await read("../index.html");
+  const sw = await read("../sw.js");
+  const css = await read("../styles.css");
+  const illustration = await read("../assets/workspace-illustration.svg");
+  assert.match(html, /workspace-illustration\.svg/);
+  assert.match(sw, /workspace-illustration\.svg/);
+  assert.match(illustration, /<svg/);
+  assert.doesNotMatch(css, /@import\s+url\(['"]https?:/);
+});
