@@ -150,6 +150,6 @@ test("dashboard statistics use a responsive four-card grid", async () => {
 test("imported record IDs are escaped before entering HTML attributes", async () => {
   const app = await read("../app.js");
   for (const attribute of ["data-preview", "data-file", "data-edit-doc", "data-delete-doc", "data-toggle", "data-edit-task", "data-delete-task"]) {
-    assert.ok(app.includes(attribute + '=\"${esc('), \"Missing escaped attribute interpolation for \" + attribute);
+    assert.ok(app.includes(attribute + '="${esc('), "Missing escaped attribute interpolation for " + attribute);
   }
 });
